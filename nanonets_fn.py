@@ -59,7 +59,7 @@ def receipt_parser(image: bytes) -> str:
 
     print(f"Running OCR on image with size: {image_pil.size}")
 
-    prompt = """Extract all the the items purchased as shown in the receipt above together with their price and quantity if have. Display output in tabular format"""
+    prompt = """Extract all the the items purchased as shown in the receipt above together with their price and quantity if have. Output only the purchased items in tabular format"""
     messages = [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": [
